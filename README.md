@@ -21,3 +21,9 @@ IMPORTANT REMARK: This is done for the four categories (A,B,C,D) of LCFI+
 
 
 Tutorial in Tutorial.md   
+
+
+This is an adaptation/extension of another PSO originally being a 2-class classifier adapted by Andrej Saibel to work at CMS. 
+Link to the original repository by A.S.: https://github.com/Andrej-CMS/ParticleSwarmOptimization.git
+
+Thanks Andrej for the much-needed help for this adaptation :)
