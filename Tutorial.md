@@ -1,5 +1,17 @@
 
-Tutorial:
+Tutorial for Flavour tagging in LCFI+ (and prerequisites for PSO):
+-Three main algorithms: TrackNTuple,  MakeNTuple, TrainMVA.
+       -TrackNTuple: Prepare vertexing info, you probably won't need to re-do it.
+       -MakeNTuple: Prepare the data for training. Here's where you use for new MC data for new weights.
+       -TrainMVA: Use the data to train the BDTs and prepare the weights you use for FT. This is what we optimize with PSO.
+-Pre-requisites:
+	-You need "pure" samples for each class (b-jets, c-jets, uds-jets).
+	-You can use a processor before MakeNTuple to extract the desired flavour in each case.
+	     -Here's such processor (https://github.com/marherje/LCIO_Extraction.git).
+	     -Notice the ISR cut values that define what we consider signal: we used k_isr<35GeV for the 250GeV and k_isr<50GeV for the 500GeV samples.
+	-After you have the MakeNTuples for b,c and uds you're ready to go to the TrainMVA optimisation using the PSO!
+
+Tutorial to use Particle Swarm Optimization (PSO) for LCFI+:
 
 1) Clone the repository
 
